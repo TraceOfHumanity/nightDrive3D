@@ -1,6 +1,8 @@
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import React from "react";
 import { Ground } from "./Ground";
+import { Car } from "./Car";
+import Rings from "./Rings";
 
 export const CarShow = () => {
   return (
@@ -10,8 +12,8 @@ export const CarShow = () => {
       <ambientLight intensity={1} />
       <color args={[0, 0, 0]} attach="background" />
       <spotLight
-        color="#FE5101"
-        intensity={20}
+        color="#FE0101"
+        intensity={200}
         angle={3}
         penumbra={2}
         position={[4, 3, 1]}
@@ -19,8 +21,8 @@ export const CarShow = () => {
         shadow-bias={-0.0001}
       />
       <spotLight
-        color={[0.14, 0.5, 1]}
-        intensity={20}
+        color="#038CAF"
+        intensity={150}
         angle={0.6}
         penumbra={0.5}
         position={[-5, 5, 0]}
@@ -29,6 +31,8 @@ export const CarShow = () => {
       />
 
       <Ground />
+      <Car />
+      <Rings />
       {/* <mesh>
         <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial color="red" />
