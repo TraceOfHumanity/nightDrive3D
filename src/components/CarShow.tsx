@@ -54,9 +54,9 @@ export const CarShow = () => {
       </CubeCamera>
       <Rings />
       <Boxes />
-      <EffectComposer>
+      {/* <EffectComposer> */}
         {/* <DepthOfField focusDistance={0.0035} focalLength={0.01} bokehScale={3} height={480} /> */}
-        <Bloom
+        {/* <Bloom
           blendFunction={BlendFunction.ADD}
           intensity={0.1} // The bloom intensity.
           width={300} // render width
@@ -64,14 +64,14 @@ export const CarShow = () => {
           kernelSize={1} // blur kernel size
           luminanceThreshold={0.15} // luminance threshold. Raise this value to mask out darker elements in the scene.
           luminanceSmoothing={0.025} // smoothness of the luminance threshold. Range is [0, 1]
-        />
-        <ChromaticAberration
+        /> */}
+        {/* <ChromaticAberration
           blendFunction={BlendFunction.NORMAL} // blend mode
           offset={new Vector2(0.0005, 0.0012)} // color offset
           radialModulation={true} // Enable radial modulation
           modulationOffset={0.23} // Example value
-        />
-      </EffectComposer>
+        /> */}
+      {/* </EffectComposer> */}
       {/* <mesh>
         <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial color="red" />
