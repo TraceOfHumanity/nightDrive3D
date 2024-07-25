@@ -52,7 +52,7 @@ export const CarShow = () => {
           </>
         )}
       </CubeCamera>
-      {/* <Rings /> */}
+      <Rings />
       {/* <Boxes /> */}
       <EffectComposer>
         {/* <DepthOfField focusDistance={0.0035} focalLength={0.01} bokehScale={3} height={480} /> */}
