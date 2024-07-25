@@ -4,17 +4,10 @@ import {
   OrbitControls,
   PerspectiveCamera,
 } from "@react-three/drei";
-import React from "react";
 import {Ground} from "./Ground";
 import {Car} from "./Car";
 import Rings from "./Rings";
-import {
-  Bloom,
-  ChromaticAberration,
-  EffectComposer,
-} from "@react-three/postprocessing";
-import {BlendFunction} from "postprocessing";
-import {Vector2} from "three";
+
 import {Boxes} from "./Boxes";
 
 export const CarShow = () => {
@@ -54,28 +47,6 @@ export const CarShow = () => {
       </CubeCamera>
       <Rings />
       <Boxes />
-      {/* <EffectComposer> */}
-        {/* <DepthOfField focusDistance={0.0035} focalLength={0.01} bokehScale={3} height={480} /> */}
-        {/* <Bloom
-          blendFunction={BlendFunction.ADD}
-          intensity={0.1} // The bloom intensity.
-          width={300} // render width
-          height={300} // render height
-          kernelSize={1} // blur kernel size
-          luminanceThreshold={0.15} // luminance threshold. Raise this value to mask out darker elements in the scene.
-          luminanceSmoothing={0.025} // smoothness of the luminance threshold. Range is [0, 1]
-        /> */}
-        {/* <ChromaticAberration
-          blendFunction={BlendFunction.NORMAL} // blend mode
-          offset={new Vector2(0.0005, 0.0012)} // color offset
-          radialModulation={true} // Enable radial modulation
-          modulationOffset={0.23} // Example value
-        /> */}
-      {/* </EffectComposer> */}
-      {/* <mesh>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color="red" />
-      </mesh> */}
     </>
   );
 };
