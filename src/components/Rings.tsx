@@ -1,10 +1,11 @@
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
-import { Color } from "three";
-const Rings = () => {
-  const itemsRef = useRef([]);
+import { Color, Mesh, MeshStandardMaterial } from "three";
 
-  useFrame((state, delta) => {
+const Rings = () => {
+  const itemsRef = useRef<Mesh[]>([]);
+
+  useFrame((state) => {
     let elapsed = state.clock.getElapsedTime();
 
     for (let i = 0; i < itemsRef.current.length; i++) {
@@ -20,12 +21,12 @@ const Rings = () => {
       }
       colorScale *= 0.5;
 
-      if (i % 2 == 1) {
-        mesh.material.emissive = new Color(6, 0.15, 0.7).multiplyScalar(
+      if (i % 2 === 1) {
+        (mesh.material as MeshStandardMaterial).emissive = new Color(6, 0.15, 0.7).multiplyScalar(
           colorScale
         );
       } else {
-        mesh.material.emissive = new Color(0.1, 0.7, 3).multiplyScalar(
+        (mesh.material as MeshStandardMaterial).emissive = new Color(0.1, 0.7, 3).multiplyScalar(
           colorScale
         );
       }
@@ -34,13 +35,13 @@ const Rings = () => {
 
   return (
     <>
-      {[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map((v, i) => (
+      {[...Array(14)].map((_, i) => (
         <mesh
           castShadow
           receiveShadow
           position={[0, 0, 0]}
           key={i}
-          ref={(el) => (itemsRef.current[i] = el)}
+          ref={(el) => (itemsRef.current[i] = el!)}
         >
           <torusGeometry args={[3.35, 0.05, 16, 100]} />
           <meshStandardMaterial emissive={[4, 0.1, 0.4]} color={[0, 0, 0]} />

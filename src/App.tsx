@@ -5,7 +5,7 @@ import {CarShow} from "./components/CarShow";
 function App() {
   return (
     <div className="w-screen h-screen">
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div className="fixed w-screen h-screen flex justify-center items-center">Loading...</div>}>
         <Canvas shadows >
           <CarShow />
         </Canvas>

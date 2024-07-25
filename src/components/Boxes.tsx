@@ -1,8 +1,8 @@
-import React, { useRef, useState } from "react";
-import { useFrame } from "@react-three/fiber";
-import { Vector3 } from "three";
+import React, {useRef, useState} from "react";
+import {useFrame} from "@react-three/fiber";
+import {Vector3} from "three";
 
-function Box({ color }) {
+function Box({color}) {
   const box = useRef();
   const time = useRef(0);
   const [position, setPosition] = useState(getInitialPosition());
