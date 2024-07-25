@@ -5,17 +5,17 @@ import {
   PerspectiveCamera,
 } from "@react-three/drei";
 import React from "react";
-import { Ground } from "./Ground";
-import { Car } from "./Car";
+import {Ground} from "./Ground";
+import {Car} from "./Car";
 import Rings from "./Rings";
-// import { Boxes } from "./Boxes";
 import {
   Bloom,
   ChromaticAberration,
   EffectComposer,
 } from "@react-three/postprocessing";
-import { BlendFunction } from "postprocessing";
-import { Vector2 } from "three";
+import {BlendFunction} from "postprocessing";
+import {Vector2} from "three";
+import {Boxes} from "./Boxes";
 
 export const CarShow = () => {
   return (
@@ -53,7 +53,7 @@ export const CarShow = () => {
         )}
       </CubeCamera>
       <Rings />
-      {/* <Boxes /> */}
+      <Boxes />
       <EffectComposer>
         {/* <DepthOfField focusDistance={0.0035} focalLength={0.01} bokehScale={3} height={480} /> */}
         <Bloom
