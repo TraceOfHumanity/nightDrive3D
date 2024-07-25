@@ -8,13 +8,14 @@ import React from "react";
 import { Ground } from "./Ground";
 import { Car } from "./Car";
 import Rings from "./Rings";
-import { Boxes } from "./Boxes";
+// import { Boxes } from "./Boxes";
 import {
   Bloom,
   ChromaticAberration,
   EffectComposer,
 } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
+import { Vector2 } from "three";
 
 export const CarShow = () => {
   return (
@@ -51,8 +52,8 @@ export const CarShow = () => {
           </>
         )}
       </CubeCamera>
-      <Rings />
-      <Boxes />
+      {/* <Rings /> */}
+      {/* <Boxes /> */}
       <EffectComposer>
         {/* <DepthOfField focusDistance={0.0035} focalLength={0.01} bokehScale={3} height={480} /> */}
         <Bloom
@@ -64,10 +65,12 @@ export const CarShow = () => {
           luminanceThreshold={0.15} // luminance threshold. Raise this value to mask out darker elements in the scene.
           luminanceSmoothing={0.025} // smoothness of the luminance threshold. Range is [0, 1]
         />
-        <ChromaticAberration
+        {/* <ChromaticAberration
           blendFunction={BlendFunction.NORMAL} // blend mode
-          offset={[0.0005, 0.0012]} // color offset
-        />
+          offset={new Vector2(0.0005, 0.0012)} // color offset
+          radialModulation={true} // Enable radial modulation
+          modulationOffset={new Vector2(0.1, 0.1)} // Example value
+        /> */}
       </EffectComposer>
       {/* <mesh>
         <boxGeometry args={[1, 1, 1]} />
