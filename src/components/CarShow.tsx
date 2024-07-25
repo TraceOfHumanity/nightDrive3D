@@ -65,12 +65,12 @@ export const CarShow = () => {
           luminanceThreshold={0.15} // luminance threshold. Raise this value to mask out darker elements in the scene.
           luminanceSmoothing={0.025} // smoothness of the luminance threshold. Range is [0, 1]
         />
-        {/* <ChromaticAberration
+        <ChromaticAberration
           blendFunction={BlendFunction.NORMAL} // blend mode
           offset={new Vector2(0.0005, 0.0012)} // color offset
           radialModulation={true} // Enable radial modulation
-          modulationOffset={new Vector2(0.1, 0.1)} // Example value
-        /> */}
+          modulationOffset={0.23} // Example value
+        />
       </EffectComposer>
       {/* <mesh>
         <boxGeometry args={[1, 1, 1]} />
