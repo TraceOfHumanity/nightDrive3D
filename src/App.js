@@ -1,15 +1,16 @@
-import { Canvas } from '@react-three/fiber';
-import React, { Suspense } from 'react';
-import { CarShow } from './components/CarShow';
+import {Canvas} from "@react-three/fiber";
+import React, {Suspense} from "react";
+import {CarShow} from "./components/CarShow";
 
 function App() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Canvas shadows>
-        <CarShow />
-
-      </Canvas>
-    </Suspense>
+    <div className="w-screen h-screen">
+      <Suspense fallback={<div>Loading...</div>}>
+        <Canvas shadows >
+          <CarShow />
+        </Canvas>
+      </Suspense>
+    </div>
   );
 }
 
