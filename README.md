@@ -8,5 +8,3 @@ You can control the position of the camera and observe the car from different an
 - React,
 - React Three Fiber,
 - React Three Drei.
-
-To run the project, download it using the command https://github.com/TraceOfHumanity/NightDrive3D.git, install the npm dependencies using the command `npm i` and then run the project using the command `npm start`
